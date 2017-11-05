@@ -10,5 +10,5 @@ require 'faker'
 Item.delete_all
 
 50.times do
-  Item.create(name: Faker::Food.dish, price: Faker::Number.decimal(2))
+  Item.create(name: Faker::Food.unique.dish, price: Faker::Number.decimal(2))
 end
